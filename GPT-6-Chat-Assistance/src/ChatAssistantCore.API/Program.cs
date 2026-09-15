@@ -1,5 +1,8 @@
 using ChatAssistantCore.Repository;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +15,22 @@ builder.Services.AddDbContext<ChatAssistantCoreContext>(options =>
 
 builder.Services.AddHttpClient();
 builder.Services.AddScoped<ChatAssistantCore.Service.Chat.IChatService, ChatAssistantCore.Service.Chat.ChatService>();
+builder.Services.AddScoped<ChatAssistantCore.Service.Auth.IAuthService, ChatAssistantCore.Service.Auth.AuthService>();
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"] ?? "default_super_secret_key_needs_to_be_long_enough_for_sha256"))
+        };
+    });
 
 // Configure CORS for Next.js frontend
 builder.Services.AddCors(options =>
@@ -42,6 +61,7 @@ app.UseHttpsRedirection();
 
 app.UseCors("AllowNextJs");
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

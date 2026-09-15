@@ -30,9 +30,10 @@ public class ChatService : IChatService
         _httpClient = httpClient;
     }
 
-    public async Task<List<ConversationDto>> GetConversationsAsync()
+    public async Task<List<ConversationDto>> GetConversationsAsync(Guid userId)
     {
         var conversations = await _context.Conversations
+            .Where(c => c.UserId == userId)
             .AsNoTracking()
             .OrderByDescending(c => c.CreatedAt)
             .Select(c => new ConversationDto
@@ -46,9 +47,10 @@ public class ChatService : IChatService
         return conversations;
     }
 
-    public async Task<ConversationDto?> GetConversationAsync(Guid id)
+    public async Task<ConversationDto?> GetConversationAsync(Guid id, Guid userId)
     {
         var conversation = await _context.Conversations
+            .Where(c => c.UserId == userId)
             .AsNoTracking()
             .Include(c => c.Messages.OrderBy(m => m.CreatedAt))
             .FirstOrDefaultAsync(c => c.Id == id);
@@ -71,11 +73,12 @@ public class ChatService : IChatService
         };
     }
 
-    public async Task<ConversationDto> CreateConversationAsync()
+    public async Task<ConversationDto> CreateConversationAsync(Guid userId)
     {
         var conversation = new Conversation
         {
             Id = Guid.NewGuid(),
+            UserId = userId,
             Title = "New Chat",
             CreatedAt = DateTime.UtcNow
         };
@@ -91,9 +94,10 @@ public class ChatService : IChatService
         };
     }
 
-    public async Task<ChatResponseDto> SendMessageAsync(Guid conversationId, ChatRequestDto request)
+    public async Task<ChatResponseDto> SendMessageAsync(Guid conversationId, Guid userId, ChatRequestDto request)
     {
         var conversation = await _context.Conversations
+            .Where(c => c.UserId == userId)
             .Include(c => c.Messages.OrderBy(m => m.CreatedAt))
             .FirstOrDefaultAsync(c => c.Id == conversationId);
 

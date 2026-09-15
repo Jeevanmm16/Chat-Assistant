@@ -7,8 +7,8 @@ namespace ChatAssistantCore.Service.Chat;
 
 public interface IChatService
 {
-    Task<List<ConversationDto>> GetConversationsAsync();
-    Task<ConversationDto?> GetConversationAsync(Guid id);
-    Task<ConversationDto> CreateConversationAsync();
-    Task<ChatResponseDto> SendMessageAsync(Guid conversationId, ChatRequestDto request);
+    Task<List<ConversationDto>> GetConversationsAsync(Guid userId);
+    Task<ConversationDto?> GetConversationAsync(Guid id, Guid userId);
+    Task<ConversationDto> CreateConversationAsync(Guid userId);
+    Task<ChatResponseDto> SendMessageAsync(Guid conversationId, Guid userId, ChatRequestDto request);
 }

@@ -10,5 +10,8 @@ public class Conversation
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     
     // Navigation property
-    public List<Message> Messages { get; set; } = new();
+    public Guid UserId { get; set; }
+    public User User { get; set; } = null!;
+
+    public ICollection<Message> Messages { get; set; } = new List<Message>();
 }

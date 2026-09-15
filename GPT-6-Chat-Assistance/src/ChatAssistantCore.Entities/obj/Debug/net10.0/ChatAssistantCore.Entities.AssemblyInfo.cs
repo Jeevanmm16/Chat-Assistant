@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ChatAssistantCore.Entities")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e623b41bae89e34e1698b75e24ecd04ba4bc3f9a")]
 [assembly: System.Reflection.AssemblyProductAttribute("ChatAssistantCore.Entities")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ChatAssistantCore.Entities")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

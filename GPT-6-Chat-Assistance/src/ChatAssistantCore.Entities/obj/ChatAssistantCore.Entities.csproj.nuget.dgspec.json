@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\costrategix\\Downloads\\GPT-6-Chat-Assistance\\src\\ChatAssistantCore.Entities\\ChatAssistantCore.Entities.csproj": {}
+    "C:\\Users\\costrategix\\Chat-Assistant\\GPT-6-Chat-Assistance\\src\\ChatAssistantCore.Entities\\ChatAssistantCore.Entities.csproj": {}
   },
   "projects": {
-    "C:\\Users\\costrategix\\Downloads\\GPT-6-Chat-Assistance\\src\\ChatAssistantCore.Entities\\ChatAssistantCore.Entities.csproj": {
+    "C:\\Users\\costrategix\\Chat-Assistant\\GPT-6-Chat-Assistance\\src\\ChatAssistantCore.Entities\\ChatAssistantCore.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\costrategix\\Downloads\\GPT-6-Chat-Assistance\\src\\ChatAssistantCore.Entities\\ChatAssistantCore.Entities.csproj",
+        "projectUniqueName": "C:\\Users\\costrategix\\Chat-Assistant\\GPT-6-Chat-Assistance\\src\\ChatAssistantCore.Entities\\ChatAssistantCore.Entities.csproj",
         "projectName": "ChatAssistantCore.Entities",
-        "projectPath": "C:\\Users\\costrategix\\Downloads\\GPT-6-Chat-Assistance\\src\\ChatAssistantCore.Entities\\ChatAssistantCore.Entities.csproj",
+        "projectPath": "C:\\Users\\costrategix\\Chat-Assistant\\GPT-6-Chat-Assistance\\src\\ChatAssistantCore.Entities\\ChatAssistantCore.Entities.csproj",
         "packagesPath": "C:\\Users\\costrategix\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\costrategix\\Downloads\\GPT-6-Chat-Assistance\\src\\ChatAssistantCore.Entities\\obj\\",
+        "outputPath": "C:\\Users\\costrategix\\Chat-Assistant\\GPT-6-Chat-Assistance\\src\\ChatAssistantCore.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

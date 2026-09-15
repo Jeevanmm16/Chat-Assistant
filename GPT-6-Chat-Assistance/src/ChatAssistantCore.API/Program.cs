@@ -11,7 +11,7 @@ builder.Services.AddControllers();
 
 // Configure EF Core with SQL Server
 builder.Services.AddDbContext<ChatAssistantCoreContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddHttpClient();
 builder.Services.AddScoped<ChatAssistantCore.Service.Chat.IChatService, ChatAssistantCore.Service.Chat.ChatService>();
@@ -58,6 +58,12 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<ChatAssistantCore.Repository.ChatAssistantCoreContext>();
+    db.Database.Migrate();
+}
 
 app.UseCors("AllowNextJs");
 

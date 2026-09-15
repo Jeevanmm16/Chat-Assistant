@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qXUFbi6t40I=",
+  "dgSpecHash": "Qyx17ru7S4o=",
   "success": true,
-  "projectFilePath": "C:\\Users\\costrategix\\Downloads\\GPT-6-Chat-Assistance\\src\\ChatAssistantCore.DTO\\ChatAssistantCore.DTO.csproj",
+  "projectFilePath": "C:\\Users\\costrategix\\Chat-Assistant\\GPT-6-Chat-Assistance\\src\\ChatAssistantCore.DTO\\ChatAssistantCore.DTO.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

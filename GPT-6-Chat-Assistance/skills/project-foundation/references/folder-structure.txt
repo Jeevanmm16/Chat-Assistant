@@ -1,0 +1,25 @@
+<ProjectName>/
+├── src/
+│   ├── <ProjectName>Core.API/
+│   │   ├── Controllers/
+│   │   └── Program.cs
+│   ├── <ProjectName>Core.Service/
+│   │   ├── Interfaces/
+│   │   └── Implementations/
+│   ├── <ProjectName>Core.Repository/
+│   │   ├── Interfaces/
+│   │   └── Implementations/
+│   ├── <ProjectName>Core.DTO/
+│   │   └── Models/
+│   ├── <ProjectName>Core.Entities/
+│   │   └── Models/
+│   └── <ProjectName>Core-Utility/          ← Azure Functions
+├── tests/
+│   └── <ProjectName>Core.API.Tests/
+├── docs/
+│   └── architecture-overview.md
+├── scripts/
+│   ├── setup.ps1
+│   └── verify-structure.ps1
+└── build/
+    └── Directory.Build.props

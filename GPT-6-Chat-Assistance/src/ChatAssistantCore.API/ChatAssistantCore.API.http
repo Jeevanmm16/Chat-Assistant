@@ -1,0 +1,6 @@
+@ChatAssistantCore.API_HostAddress = http://localhost:5129
+
+GET {{ChatAssistantCore.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

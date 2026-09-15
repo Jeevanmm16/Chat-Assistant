@@ -1,0 +1,11 @@
+C:\Users\costrategix\Downloads\GPT-6-Chat-Assistance\src\ChatAssistantCore.Entities\bin\Debug\net10.0\ChatAssistantCore.Entities.deps.json
+C:\Users\costrategix\Downloads\GPT-6-Chat-Assistance\src\ChatAssistantCore.Entities\bin\Debug\net10.0\ChatAssistantCore.Entities.dll
+C:\Users\costrategix\Downloads\GPT-6-Chat-Assistance\src\ChatAssistantCore.Entities\bin\Debug\net10.0\ChatAssistantCore.Entities.pdb
+C:\Users\costrategix\Downloads\GPT-6-Chat-Assistance\src\ChatAssistantCore.Entities\obj\Debug\net10.0\ChatAssistantCore.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\costrategix\Downloads\GPT-6-Chat-Assistance\src\ChatAssistantCore.Entities\obj\Debug\net10.0\ChatAssistantCore.Entities.AssemblyInfoInputs.cache
+C:\Users\costrategix\Downloads\GPT-6-Chat-Assistance\src\ChatAssistantCore.Entities\obj\Debug\net10.0\ChatAssistantCore.Entities.AssemblyInfo.cs
+C:\Users\costrategix\Downloads\GPT-6-Chat-Assistance\src\ChatAssistantCore.Entities\obj\Debug\net10.0\ChatAssistantCore.Entities.csproj.CoreCompileInputs.cache
+C:\Users\costrategix\Downloads\GPT-6-Chat-Assistance\src\ChatAssistantCore.Entities\obj\Debug\net10.0\ChatAssistantCore.Entities.dll
+C:\Users\costrategix\Downloads\GPT-6-Chat-Assistance\src\ChatAssistantCore.Entities\obj\Debug\net10.0\refint\ChatAssistantCore.Entities.dll
+C:\Users\costrategix\Downloads\GPT-6-Chat-Assistance\src\ChatAssistantCore.Entities\obj\Debug\net10.0\ChatAssistantCore.Entities.pdb
+C:\Users\costrategix\Downloads\GPT-6-Chat-Assistance\src\ChatAssistantCore.Entities\obj\Debug\net10.0\ref\ChatAssistantCore.Entities.dll

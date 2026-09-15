@@ -1,0 +1,93 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "title": { "type": "string", "description": "The name of the feature." },
+    "overview": { "type": "string", "description": "High level summary of the feature's business capability." },
+    "specificationId": { "type": ["string", "null"], "description": "The exact ID of the specification (e.g., BOOK-001) if available." },
+    "apiEndpoints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "method": { "type": "string" },
+          "route": { "type": "string" },
+          "controller": { "type": "string" }
+        },
+        "required": ["method", "route", "controller"]
+      }
+    },
+    "flow": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "from": { "type": "string", "description": "The calling node in the graph (e.g., BookingController.Create)" },
+          "to": { "type": "string", "description": "The called node in the graph (e.g., BookingService.CreateBooking)" },
+          "relationship": { "type": "string", "description": "The edge type (e.g., 'calls', 'depends-on', 'publishes')" }
+        },
+        "required": ["from", "to", "relationship"]
+      }
+    },
+    "businessLogic": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rule": { "type": "string", "description": "The business rule being enforced." },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": { "type": "string", "enum": ["code", "spec", "test", "database", "git"] },
+                "symbolOrId": { "type": "string", "description": "The exact code symbol, spec ID, or test name proving this rule." }
+              },
+              "required": ["type", "symbolOrId"]
+            },
+            "minItems": 1
+          }
+        },
+        "required": ["rule", "evidence"]
+      }
+    },
+    "database": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "table": { "type": "string" },
+          "operation": { "type": "string", "enum": ["Reads", "Inserts", "Updates", "Deletes"] }
+        },
+        "required": ["table", "operation"]
+      }
+    },
+    "externalIntegrations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tests": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "gaps": {
+      "type": "array",
+      "items": {
+        "type": "string", "description": "Missing implementations, lack of evidence, or discrepancies with specs."
+      }
+    }
+  },
+  "required": [
+    "title",
+    "overview",
+    "apiEndpoints",
+    "flow",
+    "businessLogic",
+    "database",
+    "gaps"
+  ]
+}

@@ -11,7 +11,7 @@ builder.Services.AddControllers();
 
 // Configure EF Core with SQL Server
 builder.Services.AddDbContext<ChatAssistantCoreContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"), x => x.MigrationsAssembly("ChatAssistantCore.Repository")));
 
 builder.Services.AddHttpClient();
 builder.Services.AddScoped<ChatAssistantCore.Service.Chat.IChatService, ChatAssistantCore.Service.Chat.ChatService>();

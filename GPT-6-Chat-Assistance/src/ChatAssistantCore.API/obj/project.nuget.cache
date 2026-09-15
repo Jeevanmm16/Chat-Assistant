@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VdHqEmmGdCo=",
+  "dgSpecHash": "9bgCEe63L+4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\costrategix\\Chat-Assistant\\GPT-6-Chat-Assistance\\src\\ChatAssistantCore.API\\ChatAssistantCore.API.csproj",
+  "projectFilePath": "c:\\Users\\costrategix\\Chat-Assistant\\GPT-6-Chat-Assistance\\src\\ChatAssistantCore.API\\ChatAssistantCore.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\costrategix\\.nuget\\packages\\bcrypt.net-next\\4.2.0\\bcrypt.net-next.4.2.0.nupkg.sha512",
     "C:\\Users\\costrategix\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
